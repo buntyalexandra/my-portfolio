@@ -1,10 +1,10 @@
 import Navigation from "./components/navigation";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Cutive_Mono } from "next/font/google";
 import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const cutiveMono = Cutive_Mono({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Alex Bunty Portfolio",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cutiveMono.className}>
         <Providers>
           <Navigation />
           {children}
