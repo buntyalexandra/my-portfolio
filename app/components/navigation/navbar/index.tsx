@@ -25,40 +25,64 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                 />
               </svg>
             </button>
-            <ul className="hidden md:flex gap-x-6 text-black">
+            <ul className="hidden md:flex md:justify-between md:items-center gap-x-4 text-black">
               <li>
                 <Link href="/">
-                  <p>Home</p>
+                  <p className="hover:text-pink-100">Home</p>
                 </Link>
+              </li>
+              <li>
+                <p>⟡</p>
               </li>
               <li>
                 <Link href="/web-development">
-                  <p>Web Development</p>
+                  <p className="hover:text-pink-100 leading-none">
+                    Web Development
+                  </p>
                 </Link>
+              </li>
+              <li>
+                <p>⟡</p>
               </li>
               <li>
                 <Link href="/graphic-design">
-                  <p>Graphic Design</p>
+                  <p className="hover:text-pink-100 leading-none">
+                    Graphic Design
+                  </p>
                 </Link>
+              </li>
+              <li>
+                <p>⟡</p>
               </li>
               <li>
                 <Link href="/multi-media-illustration">
-                  <p>Multi-Media Illustration</p>
+                  <p className="hover:text-pink-100 leading-none">
+                    Multi-Media Illustration
+                  </p>
                 </Link>
+              </li>
+              <li>
+                <p>⟡</p>
               </li>
               <li>
                 <Link href="/cakes">
-                  <p>Cakes</p>
+                  <p className="hover:text-pink-100">Cakes</p>
                 </Link>
+              </li>
+              <li>
+                <p>⟡</p>
               </li>
               <li>
                 <Link href="/about">
-                  <p>About</p>
+                  <p className="hover:text-pink-100">About</p>
                 </Link>
               </li>
               <li>
+                <p>⟡</p>
+              </li>
+              <li>
                 <Link href="/contact">
-                  <p>Contact</p>
+                  <p className="hover:text-pink-100">Contact</p>
                 </Link>
               </li>
             </ul>
