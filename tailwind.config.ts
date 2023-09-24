@@ -7,22 +7,27 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      white: "#ffffff",
-      black: "#000000",
-      oxblood: "#41131a",
-      pink: {
-        100: "#f9e1f7",
-        900: "#e269d9",
+    extend: {
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        white: "#ffffff",
+        black: "#000000",
+        oxblood: "#41131a",
+        pink: {
+          100: "#f9e1f7",
+          900: "#e269d9",
+        },
+        green: {
+          100: "#97cf7c",
+          400: "#51af25",
+          900: "#3a8214",
+        },
+        red: "#ce1b1b",
       },
-      green: {
-        100: "#97cf7c",
-        400: "#51af25",
-        900: "#3a8214",
+      gridTemplateColumns: {
+        gallery: "repeat(auto-fit, minmax(250px, 1fr))",
       },
-      red: "#ce1b1b",
     },
   },
   plugins: [],
