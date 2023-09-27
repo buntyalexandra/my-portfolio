@@ -1,26 +1,28 @@
 "use client";
-import {
-  FormControl,
-  FormLabel,
-  Input,
-  Button,
-  Textarea,
-  FormErrorMessage,
-  Text,
-  useToast,
-} from "@chakra-ui/react";
+// import {
+//   FormControl,
+//   FormLabel,
+//   Input,
+//   Button,
+//   Textarea,
+//   FormErrorMessage,
+//   Text,
+//   useToast,
+// } from "@chakra-ui/react";
 import { useState } from "react";
 import { sendContactForm } from "../../../lib/api";
 
 const initValues = { name: "", email: "", subject: "", message: "" };
 
-const initState = { values: initValues, isLoading: false, error: "" };
+// const initState = { values: initValues, isLoading: false, error: "" };
+const initState = { values: initValues };
 
 const ContactForm = () => {
-  const toast = useToast();
+  // const toast = useToast();
   const [state, setState] = useState(initState);
   const [touched, setTouched] = useState({});
-  const { values, isLoading, error } = state;
+  // const { values, isLoading, error } = state;
+  const { values } = state;
 
   const handleChange = ({ target }) =>
     setState((prev) => ({
@@ -37,39 +39,115 @@ const ContactForm = () => {
       [target.name]: true,
     }));
 
+  // const handleSubmit = async () => {
+  //   setState((prev) => ({
+  //     ...prev,
+  //     isLoading: true,
+  //   }));
+  //   try {
+  //     await sendContactForm(values);
+  //     setTouched({});
+  //     setState(initState);
+  //     toast({
+  //       title: "Message sent.",
+  //       status: "success",
+  //       duration: 2000,
+  //       position: "top",
+  //     });
+  //   } catch (error) {
+  //     setState((prev) => ({
+  //       ...prev,
+  //       isLoading: false,
+  //       error: error.message,
+  //     }));
+  //   }
+  // };
+
   const handleSubmit = async () => {
     setState((prev) => ({
       ...prev,
-      isLoading: true,
     }));
     try {
       await sendContactForm(values);
       setTouched({});
       setState(initState);
-      toast({
-        title: "Message sent.",
-        status: "success",
-        duration: 2000,
-        position: "top",
-      });
     } catch (error) {
       setState((prev) => ({
         ...prev,
-        isLoading: false,
-        error: error.message,
       }));
     }
   };
 
   return (
     <>
-      {error && (
+      {/* {error && (
         <Text color="red.500" my={4} fontSize="xl">
           {error}
         </Text>
-      )}
+      )} */}
 
-      <FormControl isRequired isInvalid={touched.name && !values.name}>
+      <form className="flex flex-col gap-5 items-start">
+        <label className="flex flex-col">
+          Name:
+          <input
+            type="text"
+            name="name"
+            value={values.name}
+            onChange={handleChange}
+            onBlur={onBlur}
+            required
+            className="w-72 border-b-2 border-black p-1 focus:outline-none"
+          />
+        </label>
+
+        <label className="flex flex-col">
+          Email:
+          <input
+            type="email"
+            name="email"
+            value={values.email}
+            onChange={handleChange}
+            onBlur={onBlur}
+            required
+            className="w-72 border-b-2 border-black p-1 focus:outline-none"
+          />
+        </label>
+
+        <label className="flex flex-col">
+          Subject:
+          <input
+            type="text"
+            name="subject"
+            value={values.subject}
+            onChange={handleChange}
+            onBlur={onBlur}
+            required
+            className="w-72 border-b-2 border-black p-1 focus:outline-none"
+          />
+        </label>
+
+        <label className="flex flex-col">
+          Message:
+          <textarea
+            name="message"
+            value={values.message}
+            onChange={handleChange}
+            onBlur={onBlur}
+            required
+            className="w-72 h-36 border-b-2 border-black p-1 focus:outline-none"
+          />
+        </label>
+
+        <button
+          type="submit"
+          onClick={handleSubmit}
+          className="bg-black text-white p-1 text-lg hover:text-pink-900 sm:text-xl sm:p-1"
+        >
+          Submit
+        </button>
+      </form>
+
+      {/* <FormControl isRequired isInvalid={touched.name && !values.name}>
         <FormLabel>Name</FormLabel>
         <Input
           type="text"
@@ -132,106 +210,9 @@ const ContactForm = () => {
         isLoading={isLoading}
       >
         Submit
-      </Button>
+      </Button> */}
     </>
   );
 };
-
-/*
-My way of approaching this, but has some bugs and is likely too much local state
-
-const ContactForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const [isNameInvalid, setIsNameInvalid] = useState(false);
-  const [isEmailInvalid, setIsEmailInvalid] = useState(false);
-  const [isSubjectInvalid, setIsSubjectInvalid] = useState(false);
-  const [isMessageInvalid, setIsMessageInvalid] = useState(false);
-
-  const validateName = () => {
-    if (name.length == 0) {
-      setIsNameInvalid(true);
-    }
-  };
-  const validateEmail = () => {
-    if (email.length == 0) {
-      setIsEmailInvalid(true);
-    }
-  };
-  const validateSubject = () => {
-    if (subject.length == 0) {
-      setIsSubjectInvalid(true);
-    }
-  };
-  const validateMessage = () => {
-    if (message.length == 0) {
-      setIsMessageInvalid(true);
-    }
-  };
-
-  const validateForm = () => {
-    validateName();
-    validateEmail();
-    validateSubject();
-    validateMessage();
-  };
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    validateForm();
-    console.log("Data:", name, email, subject, message);
-  };
-
-  return (
-    <>
-      <FormControl isRequired isInvalid={isNameInvalid}>
-        <FormLabel>Name</FormLabel>
-        <Input
-          type="text"
-          name="name"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <FormErrorMessage>Name is Required</FormErrorMessage>
-      </FormControl>
-
-      <FormControl isRequired isInvalid={isEmailInvalid}>
-        <FormLabel>Email</FormLabel>
-        <Input
-          type="email"
-          name="email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <FormErrorMessage>Email is Required</FormErrorMessage>
-      </FormControl>
-
-      <FormControl isRequired isInvalid={isSubjectInvalid}>
-        <FormLabel>Subject</FormLabel>
-        <Input
-          type="text"
-          name="subject"
-          onChange={(e) => setSubject(e.target.value)}
-        />
-        <FormErrorMessage>Subject is Required</FormErrorMessage>
-      </FormControl>
-
-      <FormControl isRequired isInvalid={isMessageInvalid}>
-        <FormLabel>Message</FormLabel>
-        <Textarea
-          name="message"
-          onChange={(e) => setMessage(e.target.value)}
-          rows={4}
-        />
-        <FormErrorMessage>Message is Required</FormErrorMessage>
-      </FormControl>
-
-      <Button type="submit" onClick={handleSubmit}>
-        Submit
-      </Button>
-    </>
-  );
-};
- */
 
 export default ContactForm;
