@@ -6,4 +6,4 @@ Hello and thank you for taking a look at my codebase for my portfolio website! T
 
 All done by me! The unconventional layout and mixture of still life images and illustrations is meant to give the feel of a digital zine. The color story is inspired by the Breeder's [Last Splash album cover](https://upload.wikimedia.org/wikipedia/en/f/f3/TheBreedersLastSplash.jpg) (and I just had to throw some pink in there).
 
-Current Tech Stack: Next.js, Tailwind
+Current Tech Stack: Next.js, Tailwind CSS, Chakra UI
