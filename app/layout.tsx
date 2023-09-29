@@ -2,7 +2,6 @@ import Navigation from "./components/navigation";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Cutive_Mono } from "next/font/google";
-import { Providers } from "./providers";
 
 const cutiveMono = Cutive_Mono({ weight: "400", subsets: ["latin"] });
 
@@ -19,10 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cutiveMono.className}>
-        <Providers>
-          <Navigation />
-          {children}
-        </Providers>
+        <Navigation />
+        {children}
       </body>
     </html>
   );
