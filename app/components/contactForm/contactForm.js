@@ -59,7 +59,7 @@ const ContactForm = () => {
             onChange={handleChange}
             onBlur={onBlur}
             required
-            className="w-72 border-b-2 border-black p-1 focus:outline-none"
+            className="w-64 border-b-2 border-black p-1 focus:outline-none"
           />
         </label>
 
@@ -72,7 +72,7 @@ const ContactForm = () => {
             onChange={handleChange}
             onBlur={onBlur}
             required
-            className="w-72 border-b-2 border-black p-1 focus:outline-none"
+            className="w-64 border-b-2 border-black p-1 focus:outline-none"
           />
         </label>
 
@@ -85,7 +85,7 @@ const ContactForm = () => {
             onChange={handleChange}
             onBlur={onBlur}
             required
-            className="w-72 border-b-2 border-black p-1 focus:outline-none"
+            className="w-64 border-b-2 border-black p-1 focus:outline-none"
           />
         </label>
 
@@ -97,7 +97,7 @@ const ContactForm = () => {
             onChange={handleChange}
             onBlur={onBlur}
             required
-            className="w-72 h-36 border-b-2 border-black p-1 focus:outline-none"
+            className="w-64 h-36 border-b-2 border-black p-1 focus:outline-none"
           />
         </label>
 
