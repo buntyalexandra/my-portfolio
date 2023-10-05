@@ -22,6 +22,8 @@ const cakeData = [
     alt: "photo of a large cake with an alien on it and small cake that looks like a lion with three eyes",
     importName: "cake2",
     id: 2,
+    width: 720,
+    height: 900,
   },
   {
     img: "frog_cake.JPG",
@@ -33,6 +35,8 @@ const cakeData = [
     alt: "photo of a round cake with a marzipan sculpted frog making a cake and preparing for a party",
     importName: "cake3",
     id: 3,
+    width: 720,
+    height: 900,
   },
   {
     img: "girl_power_cake.JPG",
@@ -44,6 +48,8 @@ const cakeData = [
     alt: "photo of a round cake with flowers that says girl power",
     importName: "cake4",
     id: 4,
+    width: 720,
+    height: 900,
   },
   {
     img: "daisy_cake.JPG",
@@ -55,6 +61,8 @@ const cakeData = [
     alt: "photo of a round cake with piped daises and cherries on top",
     importName: "cake5",
     id: 5,
+    width: 720,
+    height: 900,
   },
   {
     img: "living_room_cake.JPG",
@@ -65,6 +73,8 @@ const cakeData = [
     alt: "photo of a round cake with living room scene sculpted from marzipan",
     importName: "cake6",
     id: 6,
+    width: 720,
+    height: 897,
   },
   {
     img: "shell_cake.jpg",
@@ -75,6 +85,8 @@ const cakeData = [
     alt: "photo of a cake shaped like a seashell",
     importName: "cake7",
     id: 7,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "shag_check_cake.jpg",
@@ -86,6 +98,8 @@ const cakeData = [
     alt: "photo of a round shag carpet textured cake with a black and white checkerboard print",
     importName: "cake8",
     id: 8,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "daisy_airbrush_cake.jpg",
@@ -97,6 +111,8 @@ const cakeData = [
     alt: "photo of a round cake with airbrushed daisies",
     importName: "cake9",
     id: 9,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "squiggle_cake.jpg",
@@ -108,6 +124,8 @@ const cakeData = [
     alt: "photo of a round cake with squiggles and cherries on top",
     importName: "cake10",
     id: 10,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "squiggle2_cake.jpg",
@@ -118,6 +136,8 @@ const cakeData = [
     alt: "photo of a round cake with squiggles and cherries on top",
     importName: "cake11",
     id: 11,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "butterfuly_cake.jpg",
@@ -129,6 +149,8 @@ const cakeData = [
     alt: "photo of a round cake with airbrushed butterflies",
     importName: "cake12",
     id: 12,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "witch_cake.jpg",
@@ -140,6 +162,8 @@ const cakeData = [
     alt: "photo of a round cake with a purple witch hand, snake, and eyeball",
     importName: "cake13",
     id: 13,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "lisafrank_cake.jpg",
@@ -150,6 +174,8 @@ const cakeData = [
     alt: "photo of a round rainbow colored cake with tiger stripes",
     importName: "cake14",
     id: 14,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "fall_shag_cake.jpg",
@@ -161,6 +187,8 @@ const cakeData = [
     alt: "photo of a round cake with shag carpet texture in a 1970s print",
     importName: "cake15",
     id: 15,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "heart_cake.jpg",
@@ -171,6 +199,8 @@ const cakeData = [
     alt: "photo of a heart shaped cake with frilly decorations and cherries on top",
     importName: "cake16",
     id: 16,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "bo_peep_cake.jpg",
@@ -182,6 +212,8 @@ const cakeData = [
     alt: "photo of a round cake in pastel colors with frills and cherries on top",
     importName: "cake17",
     id: 17,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "checkered_cake.jpg",
@@ -193,6 +225,8 @@ const cakeData = [
     alt: "photo of a round pastel checkerboard cake",
     importName: "cake18",
     id: 18,
+    width: 1008,
+    height: 1344,
   },
   {
     img: "valentines_mini_cakes.jpg",
@@ -204,6 +238,8 @@ const cakeData = [
     alt: "photo of a round mini cakes with abstract pallet brush marks like that of a painting",
     importName: "cake19",
     id: 19,
+    width: 1008,
+    height: 1344,
   },
 ];
 
