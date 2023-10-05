@@ -3,18 +3,21 @@ import Image from "next/image";
 
 export default function SingleCake({ cakeInfo }) {
   return (
-    <figure>
-      <Image
-        src={`/${cakeInfo.img}`}
-        alt={cakeInfo.alt}
-        key={cakeInfo.id}
-        width={500}
-        height={500}
-        className="w-60 h-96"
-      />
-      <h1>{cakeInfo.name}</h1>
-      <figcaption>{cakeInfo.caption}</figcaption>
-    </figure>
+    <div>
+      <figure className="flex flex-row flex-wrap">
+        <Image
+          src={`/${cakeInfo.img}`}
+          alt={cakeInfo.alt}
+          key={cakeInfo.id}
+          width={cakeInfo.width}
+          height={cakeInfo.height}
+          className="shrink"
+          sizes="(max-width:768px) 50vw, (max-width: 1200px) 25vw"
+        />
+        <h1 className="text-pink-900">{cakeInfo.name}</h1>
+        <figcaption>{cakeInfo.caption}</figcaption>
+      </figure>
+    </div>
   );
 }
 

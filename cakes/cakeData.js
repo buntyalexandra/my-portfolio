@@ -9,6 +9,8 @@ const cakeData = [
     alt: "photo of a sqaure cake with black and white diamond checkered pattern",
     importName: "cake1",
     id: 1,
+    width: 720,
+    height: 900,
   },
   {
     img: "alien_cake.JPG",
