@@ -1,5 +1,6 @@
 import Image from "next/image";
 import alex from "../../public/alex.png";
+import Link from "next/link";
 import { Oi } from "next/font/google";
 
 const oi = Oi({ weight: "400", subsets: ["latin"] });
@@ -7,9 +8,11 @@ const oi = Oi({ weight: "400", subsets: ["latin"] });
 export default function About() {
   return (
     <div className="h-screen bg-green-200 p-8">
-      <div className="border-black border-4 h-full p-8">
+      <div className="border-black border-4 p-8 h-fit">
         <div className={oi.className}>
-          <h1 className="text-black text-center text-4xl pb-8">THE SCOOP</h1>
+          <h1 className="text-black text-center text-5xl pb-8 tracking-widest">
+            THE SCOOP
+          </h1>
         </div>
         {/* <Image
         src={alex}
@@ -22,13 +25,19 @@ export default function About() {
           Baltimore, Maryland. As a perpetually curious person, I began
           exploring full-stack web development and quickly fell in love, finding
           that it satisfied the part of my brain that loves puzzling, strategy,
-          and problem solving. When I'm not working on web dev projects, I lke
+          and problem solving. When I'm not working on web dev projects, I like
           to draw, collage, and pipe things that are cute, colorful, and weird.
         </p>
         <br></br>
         <p>
-          Have something you'd like me to create? Drop me a line on my contact
-          page.
+          Have something you'd like me to create? Drop me a line on my&nbsp;
+          <Link
+            href="/contact"
+            className="bg-black text-white p-1 hover:text-pink-900"
+          >
+            contact page
+          </Link>
+          .
         </p>
         <br></br>
         <p>

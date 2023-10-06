@@ -2,6 +2,7 @@ import cakeData from "@/cakes/cakeData";
 import { notFound } from "next/navigation";
 import { getCakeData } from "../../../lib/cakes";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Cake({ params }: { params: { cakeId: string } }) {
   const cakes = cakeData;
@@ -29,6 +30,11 @@ export default async function Cake({ params }: { params: { cakeId: string } }) {
         <h1 className="text-black">{cakeInfo.name}</h1>
         <hr className="border-1 border-black"></hr>
         <p className="text-pink-900 text-sm">{cakeInfo.caption}</p>
+        <Link href="/cakes">
+          <button className="bg-black text-white p-1 text-xs hover:text-pink-900">
+            all cakes
+          </button>
+        </Link>
       </div>
     </div>
   );

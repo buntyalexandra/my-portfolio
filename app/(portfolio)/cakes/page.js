@@ -20,6 +20,7 @@ export default function Cakes() {
                   key={cake.id}
                   fill={true}
                   className="object-cover group-hover:opacity-75"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 />
               </div>
             </Link>
