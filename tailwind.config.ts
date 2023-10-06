@@ -26,6 +26,18 @@ const config: Config = {
         },
         red: "#ce1b1b",
       },
+      width: {
+        "100": "28rem",
+        "104": "32rem",
+        "108": "36rem",
+        "116": "44rem",
+      },
+      height: {
+        "100": "28rem",
+        "104": "32rem",
+        "108": "36rem",
+        "116": "44rem",
+      },
     },
   },
   plugins: [],

@@ -11,7 +11,7 @@ export default function Cakes() {
           return (
             <Link href={`/cakes/${cake.id}`}>
               <div
-                className="w-60 h-96 bg-pink-900 relative overflow-hidden group"
+                className="w-60 h-80 bg-pink-900 relative overflow-hidden group"
                 key={cake.id}
               >
                 <Image
