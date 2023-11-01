@@ -7,6 +7,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of a wallpapered 1970s foyer with spiral staircase",
     id: 1,
+    orientation: "landscape",
   },
   {
     img: "HotTub_edited.jpg",
@@ -16,6 +17,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of a hot tub",
     id: 2,
+    orientation: "landscape",
   },
   {
     img: "SquareConversationPit_edited.jpg",
@@ -25,6 +27,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of a 1960s living room with a square conversation pit sofa",
     id: 3,
+    orientation: "landscape",
   },
   {
     img: "Tropical_pit_edited.jpg",
@@ -34,6 +37,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of a 1960s tropical living room with a round conversation pit sofa",
     id: 4,
+    orientation: "portrait",
   },
   {
     img: "Circles_edited.jpg",
@@ -43,6 +47,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of a 1960s living room with a round conversation pit sofa",
     id: 5,
+    orientation: "landscape",
   },
   {
     img: "Futurism_Chrome_edited.jpg",
@@ -52,6 +57,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of a 1960s dining room and living room with chrome accents",
     id: 6,
+    orientation: "landscape",
   },
   {
     img: "DiningRoom_edited.jpg",
@@ -61,6 +67,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of a 1960s dining room with circle pattern on walls and rug",
     id: 7,
+    orientation: "portrait",
   },
   {
     img: "Rentals_edited.jpg",
@@ -70,6 +77,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of a patterned carpeted roller rink food court and skate rentals counter",
     id: 8,
+    orientation: "landscape",
   },
   {
     img: "Skateland_edited.jpg",
@@ -79,6 +87,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of an empty roller rink with disco ball and lights on the ceiling",
     id: 9,
+    orientation: "landscape",
   },
   {
     img: "Rentals_Cake_edited.jpg",
@@ -88,6 +97,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of a patterned carpeted roller rink skate rentals counter with a dropped birthday cake on the ground",
     id: 10,
+    orientation: "landscape",
   },
   {
     img: "RollerRink_Lights_edited.jpg",
@@ -97,6 +107,7 @@ const printIllustrationData = [
     tag: "print",
     alt: "photo of a gel pen line drawing on black paper of an empty roller rink with lights covering the entire ceiling",
     id: 11,
+    orientation: "landscape",
   },
 ];
 

@@ -23,28 +23,62 @@ export default async function PrintIllustration({
   console.log("id:", id);
   console.log("printIllustrationInfo:", printIllustrationInfo);
 
-  return (
-    <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
-      <div className="relative w-96 h-72 overflow-hidden group md:w-96 md:h-80 lg:w-104 lg:h-96">
-        <Image
-          src={`/${printIllustrationInfo.img}`}
-          alt={printIllustrationInfo.alt}
-          key={printIllustrationInfo.id}
-          fill={true}
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+  // if the image is landscape, return card with the styling for a landscape image
+  if (printIllustrationInfo.orientation === "landscape") {
+    return (
+      <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
+        <div className="relative w-96 h-72 overflow-hidden group md:w-96 md:h-80 lg:w-104 lg:h-96">
+          <Image
+            src={`/${printIllustrationInfo.img}`}
+            alt={printIllustrationInfo.alt}
+            key={printIllustrationInfo.id}
+            fill={true}
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        <div className="flex flex-col w-48 gap-2">
+          <h1 className="text-black">{printIllustrationInfo.name}</h1>
+          <hr className="border-1 border-black"></hr>
+          <p className="text-pink-900 text-sm">
+            {printIllustrationInfo.caption}
+          </p>
+          <Link href="/multi-media-illustration">
+            <button className="bg-black text-white p-1 text-xs hover:text-pink-900">
+              all multi-media illustrations
+            </button>
+          </Link>
+        </div>
       </div>
-      <div className="flex flex-col w-48 gap-2">
-        <h1 className="text-black">{printIllustrationInfo.name}</h1>
-        <hr className="border-1 border-black"></hr>
-        <p className="text-pink-900 text-sm">{printIllustrationInfo.caption}</p>
-        <Link href="/multi-media-illustration">
-          <button className="bg-black text-white p-1 text-xs hover:text-pink-900">
-            all multi-media illustrations
-          </button>
-        </Link>
+    );
+  }
+  // if the image is portrait, return card with the styling for a portrait image
+  if (printIllustrationInfo.orientation !== "landscape") {
+    return (
+      <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
+        <div className="relative w-72 h-96 overflow-hidden group md:w-80 md:h-96 lg:w-96 lg:h-104">
+          <Image
+            src={`/${printIllustrationInfo.img}`}
+            alt={printIllustrationInfo.alt}
+            key={printIllustrationInfo.id}
+            fill={true}
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+        <div className="flex flex-col w-48 gap-2">
+          <h1 className="text-black">{printIllustrationInfo.name}</h1>
+          <hr className="border-1 border-black"></hr>
+          <p className="text-pink-900 text-sm">
+            {printIllustrationInfo.caption}
+          </p>
+          <Link href="/multi-media-illustration">
+            <button className="bg-black text-white p-1 text-xs hover:text-pink-900">
+              all multi-media illustrations
+            </button>
+          </Link>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
