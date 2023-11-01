@@ -1,6 +1,6 @@
-import cakeData from "@/cakes/cakeData";
+import cakeData from "../../../../portfolioData/cakeData";
 import { notFound } from "next/navigation";
-import { getCakeData } from "../../../lib/cakes";
+import { getCakeData } from "../../../../lib/portfolioData";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,6 +13,9 @@ export default async function Cake({ params }: { params: { cakeId: string } }) {
   }
 
   const cakeInfo = await getCakeData(cakeId);
+  console.log("params:", params);
+  console.log("cake id:", cakeId);
+  console.log("cake info:", cakeInfo);
 
   return (
     <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">

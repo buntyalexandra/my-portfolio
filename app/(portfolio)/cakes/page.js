@@ -1,4 +1,4 @@
-import cakeData from "../../../cakes/cakeData";
+import cakeData from "../../../portfolioData/cakeData";
 import Image from "next/image";
 import Link from "next/link";
 
