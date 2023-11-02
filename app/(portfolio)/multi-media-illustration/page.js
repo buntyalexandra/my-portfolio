@@ -1,11 +1,18 @@
 import printIllustrationData from "../../../portfolioData/printIllustrationData";
 import Image from "next/image";
 import Link from "next/link";
+import { Oi } from "next/font/google";
+
+const oi = Oi({ weight: "400", subsets: ["latin"] });
 
 export default function Illustration() {
   return (
     <div className="flex flex-col items-center p-16">
-      <h1>Multi-Media Illustration!</h1>
+      <div className={oi.className}>
+        <h1 className="text-black text-center text-4xl pb-8 tracking-widest">
+          MULTI-MEDIA <br></br>ILLUSTRATION
+        </h1>
+      </div>
       <div className="flex flex-row flex-wrap justify-start gap-8">
         {printIllustrationData.map((printIllustration) => {
           return (

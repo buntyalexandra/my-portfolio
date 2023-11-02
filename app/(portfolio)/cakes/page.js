@@ -1,11 +1,18 @@
 import cakeData from "../../../portfolioData/cakeData";
 import Image from "next/image";
 import Link from "next/link";
+import { Oi } from "next/font/google";
+
+const oi = Oi({ weight: "400", subsets: ["latin"] });
 
 export default function Cakes() {
   return (
     <div className="flex flex-col items-center p-16">
-      <h1>Cakes!</h1>
+      <div className={oi.className}>
+        <h1 className="text-black text-center text-4xl pb-8 tracking-widest">
+          CAKES
+        </h1>
+      </div>
       <div className="flex flex-row flex-wrap justify-start gap-8">
         {cakeData.map((cake) => {
           return (
