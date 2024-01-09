@@ -7,8 +7,8 @@ const oi = Oi({ weight: "400", subsets: ["latin"] });
 
 export default function Contact() {
   return (
-    <div className="h-screen bg-pink-100 p-8">
-      <div className="border-black border-4 h-fit p-8 flex flex-col items-center md:h-fit">
+    <div className="h-fit bg-pink-100 pr-32 pl-32 pt-16 pb-16">
+      <div className="border-black border-4 h-fit p-8 flex flex-col items-center">
         <div className={oi.className}>
           <h1 className="text-black text-center text-5xl pb-8 tracking-widest">
             DROP A LINE.
