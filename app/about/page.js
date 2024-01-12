@@ -22,18 +22,19 @@ export default function About() {
           />
           <div>
             <p>
-              Hi, I'm Alex (she/her). I'm a full-stack web developer, graphic
-              designer, illustrator, and funky custom cake slinger located in
-              Baltimore, Maryland. As a perpetually curious person, I began
-              exploring full-stack web development and quickly fell in love,
-              finding that it satisfied the part of my brain that loves
-              puzzling, strategy, and problem solving. When I'm not working on
-              web dev projects, I like to draw, collage, and pipe things that
+              Hi, I&apos;m Alex (she/her). I&apos;m a full-stack web developer,
+              graphic designer, illustrator, and funky custom cake slinger
+              located in Baltimore, Maryland. As a perpetually curious person, I
+              began exploring full-stack web development and quickly fell in
+              love, finding that it satisfied the part of my brain that loves
+              puzzling, strategy, and problem solving. When I&apos;m not working
+              on web dev projects, I like to draw, collage, and pipe things that
               are cute, colorful, and weird.
             </p>
             <br></br>
             <p>
-              Have something you'd like me to create? Drop me a line on my&nbsp;
+              Have something you&apos;d like me to create? Drop me a line on
+              my&nbsp;
               <Link
                 href="/contact"
                 className="bg-black text-white p-1 hover:text-pink-900"
@@ -44,9 +45,9 @@ export default function About() {
             </p>
             <br></br>
             <p>
-              If you're torn between me and the other guy, know that I can whip
-              you up a mean dessert. And if sweets aren't your thing, I do
-              savory goodness too.
+              If you&apos;re torn between me and the other guy, know that I can
+              whip you up a mean dessert. And if sweets aren&apos;t your thing,
+              I do savory goodness too.
             </p>
           </div>
         </div>
