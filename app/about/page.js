@@ -7,14 +7,14 @@ const oi = Oi({ weight: "400", subsets: ["latin"] });
 
 export default function About() {
   return (
-    <div className="h-screen bg-green-200 pr-32 pl-32 pt-16">
-      <div className="border-black border-4 p-8 h-fit">
+    <div className="h-full bg-green-200 p-6">
+      <div className="border-black border-4 p-6 w-full lg:p-8">
         <div className={oi.className}>
           <h1 className="text-black text-center text-5xl pb-8 tracking-widest">
             THE SCOOP
           </h1>
         </div>
-        <div className="flex flex-row gap-5 items-center ">
+        <div className="flex flex-row flex-wrap gap-5 items-center justify-center">
           <Image
             src={alex}
             alt="Photo of Alex Bunty with sunglasses and out of focus green foliage background"
