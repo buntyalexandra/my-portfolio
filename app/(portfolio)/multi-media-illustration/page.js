@@ -16,7 +16,10 @@ export default function Illustration() {
       <div className="flex flex-row flex-wrap justify-start gap-8">
         {printIllustrationData.map((printIllustration) => {
           return (
-            <Link href={`/multi-media-illustration/${printIllustration.id}`}>
+            <Link
+              href={`/multi-media-illustration/${printIllustration.id}`}
+              key={printIllustration.id}
+            >
               <div
                 className="w-60 h-80 bg-pink-900 relative overflow-hidden group"
                 key={printIllustration.id}

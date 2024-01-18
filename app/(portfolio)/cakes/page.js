@@ -16,7 +16,7 @@ export default function Cakes() {
       <div className="flex flex-row flex-wrap justify-start gap-8">
         {cakeData.map((cake) => {
           return (
-            <Link href={`/cakes/${cake.id}`}>
+            <Link href={`/cakes/${cake.id}`} key={cake.id}>
               <div
                 className="w-60 h-80 bg-pink-900 relative overflow-hidden group"
                 key={cake.id}

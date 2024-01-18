@@ -16,7 +16,7 @@ export default function GraphicDesign() {
       <div className="flex flex-row flex-wrap justify-start gap-8">
         {graphicDesignData.map((artwork) => {
           return (
-            <Link href={`/graphic-design/${artwork.id}`}>
+            <Link href={`/graphic-design/${artwork.id}`} key={artwork.id}>
               <div
                 className="w-60 h-80 bg-pink-900 relative overflow-hidden group"
                 key={artwork.id}
