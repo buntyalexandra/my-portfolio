@@ -12,7 +12,10 @@ export default async function Cake({ params }: { params: { cakeId: string } }) {
     return notFound();
   }
 
-  const cakeInfo = await getCakeData(cakeId);
+  let fetchCakeInfo = await getCakeData(cakeId);
+  // without this line of code, I recieve the TypeScript error that cakeInfo is possibly "undefined". While it is not the best solution to force the TS compilier to skip the stirct null checks for cakeInfo, I am ok with the solution becuase getCakeData only runs if passed a valid cakeId. I already check for and handle invalid ids in the if statement on line 11
+  let cakeInfo = fetchCakeInfo!;
+
   console.log("params:", params);
   console.log("cake id:", cakeId);
   console.log("cake info:", cakeInfo);
@@ -98,7 +101,9 @@ export default async function Cake({ params }: { params: { cakeId: string } }) {
         </div>
       </div>
     );
-  } else {
+  }
+  // if this is not the first or last image, then we want our forward and back arrows to increment or decrement by one
+  else {
     return (
       <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
         <div className="flex flex-col gap-4 items-center">
