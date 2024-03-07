@@ -18,7 +18,10 @@ export default async function PrintIllustration({
   ) {
     return notFound();
   }
-  const printIllustrationInfo = await getPrintIllustrationData(id);
+
+  let fetchPrintIllustrationInfo = await getPrintIllustrationData(id);
+  // without this line of code, I recieve the TypeScript error that printIllustrationInfo is possibly "undefined". While it is not the best solution to force the TS compilier to skip the stirct null checks for graphicDesignArtworkInfo, I am ok with the solution becuase getPrintIllustrationData only runs if passed a valid artworkId. I already check for and handle invalid ids in the if statement on line 14
+  let printIllustrationInfo = fetchPrintIllustrationInfo!;
   console.log("params:", params);
   console.log("id:", id);
   console.log("printIllustrationInfo:", printIllustrationInfo);
