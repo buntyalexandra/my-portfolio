@@ -7,7 +7,7 @@ const oi = Oi({ weight: "400", subsets: ["latin"] });
 
 export default function Illustration() {
   return (
-    <div className="flex flex-col items-center p-16">
+    <div className="flex flex-col items-center p-6 lg:p-16">
       <div className={oi.className}>
         <h1 className="text-black text-center text-2xl lg:text-4xl pb-8 tracking-widest">
           MULTI-MEDIA <br></br>ILLUSTRATION
