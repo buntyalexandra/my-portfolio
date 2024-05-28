@@ -8,18 +8,18 @@ const oi = Oi({ weight: "400", subsets: ["latin"] });
 
 export default function WebDevelopment() {
   return (
-    <div className="flex flex-col items-center pt-16 pr-32 pl-32 pb-32">
+    <div className="flex flex-col items-center pt-16 pl-6 pr-6 lg:pt-16 lg:pr-32 lg:pl-32 lg:pb-32">
       <div className={oi.className}>
-        <h1 className="text-black text-center text-4xl pb-8 tracking-widest">
+        <h1 className="text-black text-center text-2xl lg:text-4xl pb-8 tracking-widest">
           WEB DEVELOPMENT
         </h1>
       </div>
-      <div className="flex flex-col items-center gap-14">
-        <div className="flex flex-row gap-5 items-center">
+      <div className="flex flex-col items-center gap-10 lg:gap-14">
+        <div className="flex flex-row gap-3 lg:gap-5 items-start lg:items-center">
           <Image
             src={galleryHouse}
             alt="image of gallery house logo"
-            className="w-10"
+            className="w-8 lg:w-10"
           />
           <div>
             <h2 className="underline underline-offset-8 text-pink-900">
@@ -59,7 +59,7 @@ export default function WebDevelopment() {
             </p>
           </div>
         </div>
-        <div className="flex flex-row gap-5 items-center">
+        <div className="flex flex-col-reverse lg:flex-row gap-3 lg:gap-5 items-center">
           <div>
             <h2 className="underline underline-offset-8 text-pink-900">
               Can I Cocktail?
@@ -94,14 +94,14 @@ export default function WebDevelopment() {
           <Image
             src={canICocktail}
             alt="image of a neon sign of a butler's hand presenting a tray holding a martini with an olive on a skewer"
-            className="w-48"
+            className="w-36 lg:w-48"
           />
         </div>
-        <div className="flex flex-row gap-5 items-center">
+        <div className="flex flex-col lg:flex-row lg:gap-5 items-center">
           <Image
             src={hopMart}
             alt="image of a plastic grocery bag with roses and the text Thank You"
-            className="w-40"
+            className="w-28 lg:w-40"
           />
           <div>
             <h2 className="underline underline-offset-8 text-pink-900">
