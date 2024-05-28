@@ -9,11 +9,11 @@ export default function Cakes() {
   return (
     <div className="flex flex-col items-center p-16">
       <div className={oi.className}>
-        <h1 className="text-black text-center text-4xl pb-8 tracking-widest">
+        <h1 className="text-black text-center text-2xl lg:text-4xl pb-8 tracking-widest">
           CAKES
         </h1>
       </div>
-      <div className="flex flex-row flex-wrap justify-start gap-8">
+      <div className="flex flex-row flex-wrap justify-center gap-8">
         {cakeData.map((cake) => {
           return (
             <Link href={`/cakes/${cake.id}`} key={cake.id}>
