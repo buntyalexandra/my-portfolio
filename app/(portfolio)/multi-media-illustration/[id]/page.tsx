@@ -29,9 +29,9 @@ export default async function PrintIllustration({
   // if this is the first image, we want the back arrow to navigate to the last image in our series
   if (printIllustrationInfo.id === 1) {
     return (
-      <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
+      <div className="h-screen bg-pink-100 flex flex-col lg:flex-row gap-6 p-12 justify-start items-center md:justify-center lg:items-start lg:justify-center">
         <div className="flex flex-col gap-4 items-center">
-          <div className="relative w-96 h-72 overflow-hidden group md:w-96 md:h-80 lg:w-104 lg:h-96">
+          <div className="relative w-80 h-64 overflow-hidden group md:w-96 md:h-80 lg:w-104 lg:h-96">
             <Image
               src={`/${printIllustrationInfo.img}`}
               alt={printIllustrationInfo.alt}
@@ -77,9 +77,9 @@ export default async function PrintIllustration({
   // if this is the last image, we want the back arrow to navigate to the last image in our series
   if (printIllustrationInfo.id === printIllustrations.length) {
     return (
-      <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
+      <div className="h-screen bg-pink-100 flex flex-col lg:flex-row gap-6 p-12 justify-start items-center md:justify-center lg:items-start lg:justify-center">
         <div className="flex flex-col gap-4 items-center">
-          <div className="relative w-96 h-72 overflow-hidden group md:w-96 md:h-80 lg:w-104 lg:h-96">
+          <div className="relative w-80 h-64 overflow-hidden group md:w-96 md:h-80 lg:w-104 lg:h-96">
             <Image
               src={`/${printIllustrationInfo.img}`}
               alt={printIllustrationInfo.alt}
@@ -123,9 +123,9 @@ export default async function PrintIllustration({
   // if the image is landscape, return card with the styling for a landscape image
   if (printIllustrationInfo.orientation === "landscape") {
     return (
-      <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
+      <div className="h-screen bg-pink-100 flex flex-col lg:flex-row gap-6 p-12 justify-start items-center md:justify-center lg:items-start lg:justify-center">
         <div className="flex flex-col gap-4 items-center">
-          <div className="relative w-96 h-72 overflow-hidden group md:w-96 md:h-80 lg:w-104 lg:h-96">
+          <div className="relative w-80 h-64 overflow-hidden group md:w-96 md:h-80 lg:w-104 lg:h-96">
             <Image
               src={`/${printIllustrationInfo.img}`}
               alt={printIllustrationInfo.alt}
@@ -170,7 +170,7 @@ export default async function PrintIllustration({
   // if the image is portrait, return card with the styling for a portrait image
   if (printIllustrationInfo.orientation !== "landscape") {
     return (
-      <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
+      <div className="h-screen bg-pink-100 flex flex-col lg:flex-row gap-6 p-12 justify-start items-center md:justify-center lg:items-start lg:justify-center">
         <div className="flex flex-col gap-4 items-center">
           <div className="relative w-72 h-96 overflow-hidden group md:w-80 md:h-96 lg:w-96 lg:h-104">
             <Image

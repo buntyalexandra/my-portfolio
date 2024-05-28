@@ -23,7 +23,7 @@ export default async function Cake({ params }: { params: { cakeId: string } }) {
   // if this is the first image, we want the back arrow to navigate to the last image in our series
   if (cakeInfo.id === 1) {
     return (
-      <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
+      <div className="h-screen bg-pink-100 flex flex-col lg:flex-row gap-6 p-12 justify-start items-center md:justify-center lg:items-start lg:justify-center">
         <div className="flex flex-col gap-4 items-center">
           <div className="relative w-72 h-96 overflow-hidden group md:w-80 md:h-96 lg:w-96 lg:h-104">
             <Image
@@ -64,7 +64,7 @@ export default async function Cake({ params }: { params: { cakeId: string } }) {
   // if this is the last image, we want the back arrow to navigate to the last image in our series
   if (cakeInfo.id === cakes.length) {
     return (
-      <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
+      <div className="h-screen bg-pink-100 flex flex-col lg:flex-row gap-6 p-12 justify-start items-center md:justify-center lg:items-start lg:justify-center">
         <div className="flex flex-col gap-4 items-center">
           <div className="relative w-72 h-96 overflow-hidden group md:w-80 md:h-96 lg:w-96 lg:h-104">
             <Image
@@ -105,7 +105,7 @@ export default async function Cake({ params }: { params: { cakeId: string } }) {
   // if this is not the first or last image, then we want our forward and back arrows to increment or decrement by one
   else {
     return (
-      <div className="h-screen bg-pink-100 flex flex-row flex-wrap gap-6 p-12 justify-start md:justify-center lg:justify-center">
+      <div className="h-screen bg-pink-100 flex flex-col lg:flex-row gap-6 p-12 justify-start items-center md:justify-center lg:items-start lg:justify-center">
         <div className="flex flex-col gap-4 items-center">
           <div className="relative w-72 h-96 overflow-hidden group md:w-80 md:h-96 lg:w-96 lg:h-104">
             <Image
